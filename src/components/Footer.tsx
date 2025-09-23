@@ -1,5 +1,5 @@
+import { Facebook, Instagram, Twitter } from 'lucide-react';
 import React from 'react';
-import { Instagram, Facebook, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -8,13 +8,11 @@ const Footer: React.FC = () => {
         <div className="text-center">
           {/* Logo e nome da empresa */}
           <div className="flex items-center justify-center space-x-3 mb-8">
-            <div className="w-8 h-8 bg-gradient-to-br from-hot-pink to-hot-pink/80 rounded-lg flex items-center justify-center transform rotate-12">
-              <div className="w-5 h-5 bg-white rounded-sm transform -rotate-12"></div>
-            </div>
-            <h3 className="text-lg font-bold text-gray-900">
-              <span className="text-hot-pink">Agência</span>{' '}
-              <span className="text-gray-800">Modelo Marketing</span>
-            </h3>
+            <img 
+              src="public\LOGO1.png"
+              alt="Agência Modelo Marketing Logo"
+              className="h-24 w-auto"
+            />
           </div>
 
           {/* Descrição */}

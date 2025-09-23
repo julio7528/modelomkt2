@@ -7,10 +7,13 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-center h-16">
           <div className="flex items-center space-x-3">
             {/* Logo geométrico rosa */}
-            <div className="w-10 h-10 bg-gradient-to-br from-hot-pink to-hot-pink/80 rounded-lg flex items-center justify-center transform rotate-12">
-              <div className="w-6 h-6 bg-white rounded-sm transform -rotate-12"></div>
-            </div>
-            
+                        <img 
+              src='/LOGO3.png' 
+              alt="Logo"
+              className="h-7 w-auto"
+              width={40}
+              height={40}
+            />
             {/* Nome da empresa */}
             <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
               <span className="text-hot-pink">Agência</span>{' '}
