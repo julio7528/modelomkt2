@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           {/* Logo e nome da empresa */}
           <div className="flex items-center justify-center space-x-3 mb-8">
             <img 
-              src="public\LOGO1.png"
+              src="https://technar.digital/public_img/LOGO1.png"
               alt="Agência Modelo Marketing Logo"
               className="h-24 w-auto"
             />
