@@ -8,7 +8,7 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-3">
             {/* Logo geométrico rosa */}
                         <img 
-              src='https://technar.digital/public_img/LOGO1.png' 
+              src='https://technar.digital/public_img/LOGO3.png' 
               alt="Logo"
               className="h-7 w-auto"
               width={40}
