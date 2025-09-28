@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Variants } from 'framer-motion';
 
 interface UseScrollAnimationOptions {
   threshold?: number;
@@ -15,7 +16,7 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
 
   const [isVisible, setIsVisible] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -73,7 +74,7 @@ export const scrollAnimationVariants = {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   },
@@ -87,7 +88,7 @@ export const scrollAnimationVariants = {
       x: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   },
@@ -101,7 +102,7 @@ export const scrollAnimationVariants = {
       x: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   },
@@ -115,7 +116,7 @@ export const scrollAnimationVariants = {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   },
@@ -129,8 +130,8 @@ export const scrollAnimationVariants = {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "easeOut",
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   },
-}
+} as const;
