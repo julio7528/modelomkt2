@@ -48,7 +48,7 @@ const CookieConsent: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <Cookie className="h-5 w-5 text-hot-pink" />
+            <Cookie className="h-5 w-5 text-accent-pink" />
             <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">
               Cookies
             </h3>
@@ -70,7 +70,7 @@ const CookieConsent: React.FC = () => {
             você concorda com nossa{' '}
             <a 
               href="#" 
-              className="text-hot-pink hover:text-hot-pink/80 underline font-medium"
+              className="text-accent-pink hover:text-accent-pink/80 underline font-medium"
             >
               Política de Privacidade
             </a>.
@@ -82,9 +82,9 @@ const CookieConsent: React.FC = () => {
           <button
             onClick={handleAccept}
             className="
-              flex-1 bg-hot-pink text-white font-display font-semibold py-3 px-4 rounded-lg
-              hover:bg-hot-pink/90 transition-colors duration-200
-              focus:outline-none focus:ring-2 focus:ring-hot-pink focus:ring-offset-2
+              flex-1 bg-accent-pink text-white font-display font-semibold py-3 px-4 rounded-lg
+              hover:bg-accent-pink/90 transition-colors duration-200
+              focus:outline-none focus:ring-2 focus:ring-accent-pink focus:ring-offset-2
             "
           >
             Aceitar Cookies

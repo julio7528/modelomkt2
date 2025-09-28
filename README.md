@@ -40,7 +40,7 @@ Landing page "em breve" moderna e profissional para a Agência Modelo Marketing,
    ```env
    VITE_SUPABASE_URL=sua_url_do_supabase
    VITE_SUPABASE_ANON_KEY=sua_chave_anonima_do_supabase
-   VITE_WHATSAPP_NUMBER=5511999999999
+   VITE_WHATSAPP_NUMBER=5566996823277
    ```
 
 ## 🗄️ Configuração do Supabase

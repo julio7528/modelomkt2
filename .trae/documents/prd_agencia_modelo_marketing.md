@@ -1,12 +1,10 @@
 # Documento de Requisitos do Produto - Landing Page Agência Modelo Marketing
 
-## 1. Visão Geral do Produto
+## 1. Product Overview
 
-Landing page "em breve" de página única com design moderno e profissional para estabelecer presença online inicial da Agência Modelo Marketing, capturar leads qualificados e comunicar proposta de valor inovadora focada em IA.
-
-A agência é especializada em sistemas, sites e aplicações impulsionadas por Inteligência Artificial, transmitindo velocidade, eficiência e tecnologia de ponta para acelerar negócios de PMEs.
-
-O produto visa atingir o mercado de pequenas e médias empresas com faturamento mensal acima de R$ 40.000, oferecendo soluções digitais avançadas.
+Uma landing page completa e inteligente para a MMT Modelo Marketing Top, agência especializada em soluções com Inteligência Artificial. A plataforma visa consolidar uma empresa que entrega sistemas e aplicações de forma rápida e eficiente, tornando-se referência no uso de IA e na entrega de produtos funcionais.
+- O projeto estabelece presença online estratégica para gerar leads qualificados e comunicar a proposta de valor para PMEs, empreendedores e influenciadores digitais com faturamento acima de R$ 40 mil/mês.
+- Metas ambiciosas: Landing Page no ar em 30 dias, mínimo de 300 leads qualificados nos primeiros 6 meses e efetivação de 12 novos clientes por ano.
 
 ## 2. Funcionalidades Principais
 
@@ -16,60 +14,102 @@ O produto visa atingir o mercado de pequenas e médias empresas com faturamento 
 |-------|-------------------|----------------------|
 | Visitante | Acesso direto | Visualizar conteúdo, preencher formulário de contato, acessar WhatsApp |
 
-### 2.2 Módulo de Funcionalidades
+### 2.2 Feature Module
 
-Nossa landing page consiste nas seguintes páginas principais:
-1. **Página Principal**: seção hero, navegação, formulário de contato, rodapé com redes sociais, botão flutuante WhatsApp.
+Nossa landing page da MMT Modelo Marketing Top consiste nas seguintes seções principais:
+1. **Header**: cabeçalho fixo com logo MMT, menu de navegação por âncoras, botão 'Fale com nosso agente IA'.
+2. **Hero Section**: título impactante 'Transforme sua presença digital com IA de verdade', CTAs para WhatsApp e formulário, elemento visual de tecnologia.
+3. **Value Proposition**: missão, visão, valores e diferenciais 'Por que escolher a MMT?'.
+4. **Services**: serviços inteligentes (sites com IA, agentes multicanal, landing pages Instagram, automação IA).
+5. **Segmentation**: blocos customizados por IA para cada público (Empresa, Empreendedor, Influenciador).
+6. **Testimonials**: depoimentos de clientes e casos de sucesso otimizados por IA.
+7. **Dynamic Content**: notícias e insights sobre marketing digital e IA gerados automaticamente.
+8. **Lead Form**: formulário inteligente que se adapta em tempo real para pré-qualificação.
+9. **WhatsApp CTA**: botão flutuante para contato com agente IA treinado.
+10. **Footer**: contatos, redes sociais, termos de privacidade e área administrativa.
 
 ### 2.3 Detalhes das Páginas
 
-| Nome da Página | Nome do Módulo | Descrição da Funcionalidade |
-|----------------|----------------|-----------------------------|
-| Página Principal | Header | Exibir logotipo da "Agência Modelo Marketing" com design responsivo |
-| Página Principal | Seção Hero | Apresentar headline principal, subheadline sobre IA, imagem de fundo com overlay |
-| Página Principal | Formulário de Contato | Capturar dados (nome, email, telefone, mensagem), validar campos obrigatórios, integrar com Supabase, exibir mensagens de sucesso/erro |
-| Página Principal | Rodapé | Mostrar links de redes sociais (Instagram, Facebook, Twitter), copyright 2025 |
-| Página Principal | Botão WhatsApp Flutuante | Botão fixo no canto inferior direito, abrir conversa WhatsApp com número placeholder |
+| Nome da Seção | Nome do Módulo | Descrição da Funcionalidade |
+|---------------|----------------|-----------------------------|  
+| Header | Logo e Navegação | Cabeçalho fixo com logo MMT, menu de navegação por âncoras (Início, Serviços, Sobre, Contato) |
+| Header | CTA Principal | Botão destacado 'Fale com nosso agente IA' ou 'Orçamento Rápido' |
+| Hero Section | Título Impactante | 'Transforme sua presença digital com IA de verdade' com animações e elementos visuais |
+| Hero Section | CTAs Duplos | Botões para WhatsApp e formulário, elemento visual de tecnologia e inovação |
+| Value Proposition | Missão/Visão/Valores | Consolidar empresa que entrega sistemas rapidamente, referência em IA, compromisso com prazos |
+| Services | Sites Personalizados | Desenvolvimento ágil com design responsivo otimizado por IA para performance e SEO |
+| Services | Agentes IA Multicanal | Atendimento 24h em site, WhatsApp e Instagram com transferência para humanos |
+| Services | Landing Pages Instagram | Soluções para link na bio com métricas e integração inteligente ao WhatsApp |
+| Services | Automação com IA | Fluxos que qualificam leads, respondem dúvidas e acompanham cliente mantendo histórico |
+| Segmentation | Público Empresa | Bloco customizado para PMEs com soluções corporativas e automação de processos |
+| Segmentation | Público Empreendedor | Ofertas para empreendedores focadas em crescimento e presença digital |
+| Segmentation | Público Influenciador | Soluções para influenciadores com foco em engajamento e monetização |
+| Testimonials | Casos de Sucesso | Depoimentos de clientes, parceiros e resultados obtidos com textos otimizados por IA |
+| Dynamic Content | Conteúdo Automático | Notícias, dicas e insights sobre marketing digital e IA gerados automaticamente |
+| Lead Form | Formulário Inteligente | Formulário dinâmico que se adapta em tempo real para pré-qualificação automática dos leads |
+| WhatsApp CTA | Contato Instantâneo | Botão flutuante para WhatsApp atendido por agente IA treinado |
+| Footer | Informações Completas | Contatos, redes sociais, termos de privacidade, política de uso e área administrativa |
 
 ## 3. Processo Principal
 
-Fluxo principal do usuário:
-1. Visitante acessa a landing page
-2. Visualiza informações sobre a agência e serviços de IA
-3. Preenche formulário de contato com dados pessoais
-4. Submete formulário (dados salvos no Supabase)
-5. Recebe confirmação de envio
-6. Opcionalmente, clica no botão WhatsApp para contato direto
+Fluxo principal do usuário na MMT Modelo Marketing Top:
+1. Visitante acessa a landing page e visualiza o header com navegação
+2. Impactado pelo hero section 'Transforme sua presença digital com IA de verdade'
+3. Explora a proposta de valor (missão, visão, valores da MMT)
+4. Conhece os serviços inteligentes (sites com IA, agentes multicanal, automação)
+5. Identifica-se com segmentação específica (Empresa, Empreendedor ou Influenciador)
+6. Lê testimonials e casos de sucesso para validação social
+7. Consome conteúdo dinâmico sobre marketing digital e IA
+8. Preenche formulário inteligente que se adapta ao seu perfil
+9. Recebe pré-qualificação automática e confirmação
+10. Opcionalmente, inicia conversa com agente IA via WhatsApp
 
 ```mermaid
 graph TD
-    A[Acesso à Landing Page] --> B[Visualização do Conteúdo]
-    B --> C[Preenchimento do Formulário]
-    C --> D[Submissão dos Dados]
-    D --> E[Confirmação de Envio]
-    B --> F[Clique no WhatsApp]
-    F --> G[Abertura do Chat WhatsApp]
+    A[Acesso à Landing Page] --> B[Hero Section - Impacto]
+    B --> C[Value Proposition]
+    C --> D[Serviços Inteligentes]
+    D --> E[Segmentação por Público]
+    E --> F[Testimonials]
+    F --> G[Conteúdo Dinâmico IA]
+    G --> H[Formulário Inteligente]
+    H --> I[Pré-qualificação Automática]
+    I --> J[Confirmação + Follow-up]
+    B --> K[WhatsApp com Agente IA]
+    E --> K
+    H --> K
 ```
 
 ## 4. Design da Interface do Usuário
 
 ### 4.1 Estilo de Design
 
-- **Cores primárias e secundárias**: Tiffany Blue (#A0E7E5), Mint (#B4F8C8), Hot Pink (#FFAEBC), Yellow (#FBE7C6)
-- **Estilo dos botões**: Arredondados com hover effects e transições suaves
-- **Fonte e tamanhos**: Montserrat/Poppins para títulos (24px-48px), Lato/Raleway para corpo (16px-18px)
-- **Estilo de layout**: Design limpo baseado em cards, navegação superior fixa
-- **Ícones e emojis**: Ícones minimalistas para redes sociais, ícone WhatsApp em estilo flat
+- **Cores primárias e secundárias**: 
+  - Primary: #A0E7E5 (Tiffany Blue) - cor principal da marca
+  - Secondary: #B4F8C8 (Mint) - cor de apoio e destaque
+  - Accent: #FFAEBC (Hot Pink) - cor de ação e CTAs
+  - Support: #FBE7C6 (Yellow) - cor de suporte e backgrounds
+- **Estilo dos botões**: Modernos e arredondados com gradientes sutis, hover effects e micro-animações
+- **Fonte e tamanhos**: Combinação de 2-3 fontes (Lato, Raleway, Poppins, Montserrat) - títulos 32px-56px, subtítulos 20px-28px, corpo 16px-18px
+- **Estilo de layout**: Clean, moderno, organizado e profissional, focado na clareza e facilidade de contato
+- **Ícones e emojis**: Ícones minimalistas de tecnologia e IA, elementos visuais que remetem à inovação
 
 ### 4.2 Visão Geral do Design das Páginas
 
-| Nome da Página | Nome do Módulo | Elementos da UI |
-|----------------|----------------|----------------|
-| Página Principal | Header | Fundo branco, logo com ícone geométrico rosa, tipografia bold escura |
-| Página Principal | Seção Hero | Fundo com imagem e overlay escuro, texto branco centralizado, destaque em cores da marca |
-| Página Principal | Formulário | Fundo amarelo claro, campos com fundo azul tiffany translúcido, botão rosa com hover |
-| Página Principal | Rodapé | Fundo claro, ícones de redes sociais com hover rosa, texto cinza |
-| Página Principal | WhatsApp | Botão circular verde menta, ícone branco, sombra sutil, animação de escala no hover |
+| Nome da Seção | Nome do Módulo | Elementos da UI |
+|---------------|----------------|----------------|
+| Header | Logo MMT | Fundo branco/transparente, logo MMT com tipografia moderna, navegação horizontal limpa |
+| Header | CTA Principal | Botão Hot Pink (#FFAEBC) 'Fale com nosso agente IA', hover com micro-animação |
+| Hero Section | Título Impactante | Fundo com gradiente Tiffany Blue, tipografia bold 48px+, animações de entrada suaves |
+| Hero Section | Elementos Visuais | Ilustrações de tecnologia/IA, partículas animadas, CTAs duplos com cores contrastantes |
+| Value Proposition | Missão/Visão | Cards com fundo Mint (#B4F8C8), ícones de inovação, tipografia clara e profissional |
+| Services | Serviços IA | Grid responsivo, cards com hover effects, ícones de tecnologia, gradientes sutis |
+| Segmentation | Públicos | Blocos diferenciados por cores da paleta, personalização visual por tipo de cliente |
+| Testimonials | Depoimentos | Cards com sombras suaves, fotos dos clientes, aspas estilizadas, fundo neutro |
+| Dynamic Content | Conteúdo IA | Seção com fundo Yellow (#FBE7C6), cards de notícias, badges 'Gerado por IA' |
+| Lead Form | Formulário Inteligente | Campos adaptativos, validação em tempo real, botão de envio com gradiente |
+| WhatsApp CTA | Botão Flutuante | Botão circular Mint (#B4F8C8), ícone WhatsApp, sombra pronunciada, animação de pulso |
+| Footer | Informações | Fundo escuro, links organizados em colunas, ícones de redes sociais com hover effects |
 
 ### 4.3 Responsividade
 
