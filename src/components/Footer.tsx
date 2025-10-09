@@ -1,4 +1,4 @@
-import { Award, Bot, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter, Users, Zap } from 'lucide-react';
+import { Award, Bot, Instagram, Linkedin, Mail, MapPin, Phone, Users, Zap } from 'lucide-react';
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
             {/* Social Links */}
             <div className="flex space-x-4 mb-4 md:mb-0">
               <a
-                href="https://instagram.com/mmt.digital"
+                href="https://www.instagram.com/modelomarketingtop/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-r from-accent-pink to-support-peach rounded-full flex items-center justify-center hover:scale-110 transition-all duration-200 group"
@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
               </a>
               
               <a
-                href="https://linkedin.com/company/mmt-digital"
+                href="https://www.linkedin.com/company/modelomarketingtop/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-r from-primary-teal to-secondary-mint rounded-full flex items-center justify-center hover:scale-110 transition-all duration-200 group"
@@ -130,23 +130,15 @@ const Footer: React.FC = () => {
               </a>
               
               <a
-                href="https://facebook.com/mmt.digital"
+                href="https://www.youtube.com/@paulodealasca"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-r from-secondary-mint to-primary-teal rounded-full flex items-center justify-center hover:scale-110 transition-all duration-200 group"
-                aria-label="Facebook"
+                aria-label="YouTube"
               >
-                <Facebook className="w-5 h-5 text-white" />
-              </a>
-              
-              <a
-                href="https://twitter.com/mmt_digital"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-r from-support-peach to-accent-pink rounded-full flex items-center justify-center hover:scale-110 transition-all duration-200 group"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5 text-white" />
+                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
               </a>
             </div>
             

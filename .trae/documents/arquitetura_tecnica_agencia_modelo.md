@@ -32,72 +32,84 @@
 ```
 
 ## 2. Descrição das Tecnologias
-- Frontend: React@18 + TypeScript + TailwindCSS@3 + Vite + Framer Motion (animações)
-- Backend: Supabase (Database, Auth, Real-time)
-- Integrações: WhatsApp Business API + OpenAI/Claude (IA Content)
-- Formulários: React Hook Form + Zod (validação)
-- Ícones: Lucide React
-- Deployment: Vercel/Netlify
+
+* Frontend: React\@18 + TypeScript + TailwindCSS\@3 + Vite + Framer Motion (animações)
+
+* Backend: Supabase (Database, Auth, Real-time)
+
+* Integrações: WhatsApp Business API + OpenAI/Claude (IA Content)
+
+* Formulários: React Hook Form + Zod (validação)
+
+* Ícones: Lucide React
+
+* Deployment: Vercel/Netlify
 
 ## 3. Definições de Rotas
 
-| Rota | Propósito |
-|------|----------|
-| / | Landing page completa da MMT com todas as seções (Hero, Services, Segmentation, etc.) |
-| /#hero | Seção Hero - 'Transforme sua presença digital com IA de verdade' |
-| /#services | Seção de Serviços Inteligentes (Sites IA, Agentes Multicanal, Automação) |
-| /#about | Seção Value Proposition (Missão, Visão, Valores da MMT) |
-| /#testimonials | Seção de Depoimentos e Casos de Sucesso |
-| /#contact | Seção do Formulário Inteligente de Contato |
-| /admin | Área administrativa para gestão de leads e conteúdo (futuro) |
+| Rota           | Propósito                                                                             |
+| -------------- | ------------------------------------------------------------------------------------- |
+| /              | Landing page completa da MMT com todas as seções (Hero, Services, Segmentation, etc.) |
+| /#hero         | Seção Hero - 'Transforme sua presença digital com IA de verdade'                      |
+| /#services     | Seção de Serviços Inteligentes (Sites IA, Agentes Multicanal, Automação)              |
+| /#about        | Seção Value Proposition (Missão, Visão, Valores da MMT)                               |
+| /#testimonials | Seção de Depoimentos e Casos de Sucesso                                               |
+| /#contact      | Seção do Formulário Inteligente de Contato                                            |
+| /admin         | Área administrativa para gestão de leads e conteúdo (futuro)                          |
 
 ## 4. Definições de API
 
 ### 4.1 Core API
 
 Submissão de formulário inteligente com pré-qualificação
+
 ```
 POST /api/leads
 ```
 
 Request:
-| Nome do Parâmetro | Tipo do Parâmetro | Obrigatório | Descrição |
-|-------------------|-------------------|-------------|------------|
-| name | string | true | Nome completo do lead |
-| email | string | true | Email válido do lead |
-| phone | string | true | Telefone de contato |
-| company | string | false | Nome da empresa |
-| revenue | string | false | Faturamento mensal (R$ 40k+, R$ 100k+, etc.) |
-| business_type | string | true | Tipo de negócio (empresa, empreendedor, influenciador) |
-| services_interest | array | true | Serviços de interesse (sites_ia, agentes_multicanal, etc.) |
-| message | string | true | Mensagem personalizada |
-| utm_source | string | false | Origem do tráfego |
+
+| Nome do Parâmetro  | Tipo do Parâmetro | Obrigatório | Descrição                                                    |
+| ------------------ | ----------------- | ----------- | ------------------------------------------------------------ |
+| name               | string            | true        | Nome completo do lead                                        |
+| email              | string            | true        | Email válido do lead                                         |
+| phone              | string            | true        | Telefone de contato                                          |
+| company            | string            | false       | Nome da empresa                                              |
+| revenue            | string            | false       | Faturamento mensal (R$ 40k+, R$ 100k+, etc.)                 |
+| business\_type     | string            | true        | Tipo de negócio (empresa, empreendedor, influenciador)       |
+| services\_interest | array             | true        | Serviços de interesse (sites\_ia, agentes\_multicanal, etc.) |
+| message            | string            | true        | Mensagem personalizada                                       |
+| utm\_source        | string            | false       | Origem do tráfego                                            |
 
 Response:
-| Nome do Parâmetro | Tipo do Parâmetro | Descrição |
-|-------------------|-------------------|------------|
-| success | boolean | Status da operação |
-| lead_score | number | Pontuação de qualificação (0-100) |
-| qualification | string | Nível de qualificação (hot, warm, cold) |
-| next_steps | array | Próximos passos sugeridos |
-| whatsapp_link | string | Link direto para WhatsApp com contexto |
-| id | string | ID do lead criado |
+
+| Nome do Parâmetro | Tipo do Parâmetro | Descrição                               |
+| ----------------- | ----------------- | --------------------------------------- |
+| success           | boolean           | Status da operação                      |
+| lead\_score       | number            | Pontuação de qualificação (0-100)       |
+| qualification     | string            | Nível de qualificação (hot, warm, cold) |
+| next\_steps       | array             | Próximos passos sugeridos               |
+| whatsapp\_link    | string            | Link direto para WhatsApp com contexto  |
+| id                | string            | ID do lead criado                       |
 
 ### 4.2 IA Content API
 
 Geração de conteúdo dinâmico
+
 ```
 GET /api/content/dynamic
 ```
 
 Response:
-| Nome do Parâmetro | Tipo do Parâmetro | Descrição |
-|-------------------|-------------------|------------|
-| articles | array | Artigos gerados por IA sobre marketing digital |
-| tips | array | Dicas personalizadas por segmento |
-| case_studies | array | Casos de sucesso atualizados |
+
+| Nome do Parâmetro | Tipo do Parâmetro | Descrição                                      |
+| ----------------- | ----------------- | ---------------------------------------------- |
+| articles          | array             | Artigos gerados por IA sobre marketing digital |
+| tips              | array             | Dicas personalizadas por segmento              |
+| case\_studies     | array             | Casos de sucesso atualizados                   |
 
 Exemplo Request:
+
 ```json
 {
   "name": "Maria Entrepreneur",
@@ -164,6 +176,7 @@ erDiagram
 ### 6.2 Linguagem de Definição de Dados
 
 Tabela de Leads Qualificados (leads)
+
 ```sql
 -- Criar tabela de leads
 CREATE TABLE leads (
