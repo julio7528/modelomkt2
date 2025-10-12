@@ -1,15 +1,16 @@
 User-agent: *
+Disallow: /admin/
+Disallow: /wp-admin/  # Se usar WordPress
+Disallow: /uploads/private/  # Para arquivos sensíveis, ajuste se necessário
 Allow: /
 
-# Sitemap
+# Sitemap - Aponta para o sitemap atualizado
 Sitemap: https://modelomarketingtop.com.br/sitemap.xml
 
-# Crawl-delay para ser gentil com os bots
-Crawl-delay: 1
-
-# Permitir todos os bots importantes
+# Permitir bots principais sem delay para otimização de crawl
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0  # Remove delay para sites pequenos
 
 User-agent: Bingbot
 Allow: /
@@ -38,7 +39,7 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# Bloquear bots maliciosos conhecidos
+# Bloquear bots maliciosos conhecidos (mantenha se não usar Ahrefs para análise)
 User-agent: AhrefsBot
 Disallow: /
 
