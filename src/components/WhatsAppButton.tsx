@@ -7,12 +7,11 @@ const WhatsAppButton: React.FC = () => {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '5566996823277';
   
   const messages = {
-    general: 'Olá! Gostaria de falar com o Agente IA da MMT sobre soluções inteligentes para meu negócio.',
+    general: 'Olá! Gostaria de falar com a MMT sobre soluções inteligentes para meu negócio.',
     enterprise: 'Olá! Sou de uma empresa e gostaria de conhecer as soluções corporativas de IA da MMT.',
     entrepreneur: 'Olá! Sou empreendedor e quero saber como a MMT pode me ajudar a escalar meu negócio com IA.',
     influencer: 'Olá! Sou influenciador e gostaria de conhecer as soluções da MMT para monetizar minha audiência.'
   };
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPulse(false);

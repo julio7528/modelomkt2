@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent('Olá! Gostaria de falar com o agente IA da MMT sobre soluções inteligentes para meu negócio.');
-    window.open(`https://wa.me/55119999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5566996823277?text=${message}`, '_blank');
   };
 
   return (

@@ -1,39 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Home Page - Prioridade alta -->
   <url>
     <loc>https://modelomarketingtop.com.br/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://technar.digital/public_img/LOGO3.png</image:loc>
-      <image:title>MMT - Modelo Marketing Top Logo</image:title>
-      <image:caption>Logo da agência MMT especializada em marketing digital com IA</image:caption>
+      <image:title>MMT - Agência de Marketing Digital com IA</image:title>
+      <image:caption>Logo da MMT: Especialistas em sites IA, chatbots e automação</image:caption>
     </image:image>
   </url>
+  
+  <!-- Página dedicada a Sites com IA - Nova entrada para carro-chefe -->
   <url>
-    <loc>https://modelomarketingtop.com.br/#services</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://modelomarketingtop.com.br/sites-ia</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://modelomarketingtop.com.br/img/sites-ia-exemplo.png</image:loc> <!-- Adicione imagem real de demo -->
+      <image:title>Criação de Sites com Inteligência Artificial</image:title>
+      <image:caption>Exemplo de site gerado por IA na MMT para automação de negócios</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Página dedicada a Chatbots e Automação - Foco em keywords -->
   <url>
-    <loc>https://modelomarketingtop.com.br/#about</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://modelomarketingtop.com.br/chatbots-automacao</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://modelomarketingtop.com.br/img/chatbot-ia-demo.png</image:loc>
+      <image:title>Chatbots e Agentes IA para Negócios</image:title>
+      <image:caption>Chatbot integrado com WhatsApp e IA pela MMT</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Página de Serviços Gerais - Substitui âncora #services -->
+  <url>
+    <loc>https://modelomarketingtop.com.br/servicos</loc>
+    <lastmod>2025-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Página Sobre a MMT - Substitui âncoras #about e #testimonials -->
   <url>
-    <loc>https://modelomarketingtop.com.br/#testimonials</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://modelomarketingtop.com.br/sobre</loc>
+    <lastmod>2025-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Página de Contato - Substitui #contact, com links externos -->
   <url>
-    <loc>https://modelomarketingtop.com.br/#contact</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://modelomarketingtop.com.br/contato</loc>
+    <lastmod>2025-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+  <!-- Link na Bio como página adicional (se .top redirecionar para .com.br) -->
+  <url>
+    <loc>https://www.modelomarketing.top/link-na-bio/index.html</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
