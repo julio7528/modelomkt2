@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Vídeo de fundo com overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-[url('/conheca3.png')] bg-cover bg-center bg-no-repeat">
         <video 
           autoPlay 
           muted 
