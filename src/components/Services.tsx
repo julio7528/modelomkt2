@@ -1,69 +1,65 @@
-import { ArrowRight, CheckCircle, Globe, Instagram, MessageSquare, Zap } from 'lucide-react';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useScrollAnimation, scrollAnimationVariants } from '../hooks/useScrollAnimation';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight, ChevronLeft, ChevronRight, MessageSquare, Pause, Play } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { scrollAnimationVariants, useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Services: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  const services = [
-    {
-      icon: Globe,
-      title: "Sites Inteligentes com IA",
-      description: "Websites que se adaptam ao comportamento do usuário, otimizam conversões automaticamente e oferecem experiências personalizadas.",
-      features: [
-        "Personalização automática de conteúdo",
-        "Otimização de conversão em tempo real",
-        "Chatbots integrados nativamente",
-        "Analytics preditivos avançados"
-      ],
-      color: "primary-teal",
-      bgColor: "bg-primary-teal/5",
-      borderColor: "border-primary-teal/20"
-    },
-    {
-      icon: MessageSquare,
-      title: "Agentes IA Multicanal",
-      description: "Assistentes virtuais que atendem seus clientes 24/7 em WhatsApp, Instagram, site e outros canais simultaneamente.",
-      features: [
-        "Atendimento 24/7 automatizado",
-        "Integração com múltiplas plataformas",
-        "Qualificação inteligente de leads",
-        "Escalação automática para humanos"
-      ],
-      color: "secondary-mint",
-      bgColor: "bg-secondary-mint/5",
-      borderColor: "border-secondary-mint/20"
-    },
-    {
-      icon: Instagram,
-      title: "Landing Pages para Instagram",
-      description: "Páginas de conversão otimizadas especificamente para tráfego do Instagram, com foco em mobile e alta conversão.",
-      features: [
-        "Design mobile-first otimizado",
-        "Integração nativa com Instagram",
-        "Formulários inteligentes adaptativos",
-        "Pixels de conversão automáticos"
-      ],
-      color: "accent-pink",
-      bgColor: "bg-accent-pink/5",
-      borderColor: "border-accent-pink/20"
-    },
-    {
-      icon: Zap,
-      title: "Automação Inteligente",
-      description: "Fluxos automatizados que nutrem leads, segmentam audiências e executam campanhas baseadas em comportamento.",
-      features: [
-        "Nutrição automática de leads",
-        "Segmentação comportamental",
-        "Campanhas trigger inteligentes",
-        "ROI tracking automatizado"
-      ],
-      color: "support-cream",
-      bgColor: "bg-support-cream/5",
-      borderColor: "border-support-cream/20"
-    }
+  const desktopImages = [
+    "/prod1.png",
+    "/prod2.png",
+    "/prod3.png",
+    "/prod4.png"
   ];
+
+  const mobileImages = [
+    "/serv1.png",
+    "/serv2.png",
+    "/serv3.png",
+    "/serv4.png"
+  ];
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const images = isMobile ? mobileImages : desktopImages;
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+      }, 5000);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying, images.length]);
+
+  const nextSlide = () => {
+    setIsPlaying(false);
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setIsPlaying(false);
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <motion.section 
@@ -89,70 +85,68 @@ const Services: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Services Grid */}
+        {/* Carousel Section */}
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
-          variants={scrollAnimationVariants.staggerContainer}
+          className={`relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl mb-16 group bg-gray-100 ${
+            isMobile ? 'aspect-[9/16] max-h-[80vh]' : 'aspect-video'
+          }`}
+          variants={scrollAnimationVariants.fadeInUp}
         >
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <motion.div
-                key={index}
-                className={`group ${service.bgColor} ${service.borderColor} border-2 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer`}
-                variants={scrollAnimationVariants.staggerItem}
-              >
-                <div className="flex items-start space-x-6">
-                  <div className={`flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center transition-colors ${
-                    service.color === 'primary-teal' ? 'bg-primary-teal/10 group-hover:bg-primary-teal/20' :
-                    service.color === 'secondary-mint' ? 'bg-secondary-mint/10 group-hover:bg-secondary-mint/20' :
-                    service.color === 'accent-pink' ? 'bg-accent-pink/10 group-hover:bg-accent-pink/20' :
-                    'bg-support-cream/10 group-hover:bg-support-cream/20'
-                  }`}>
-                    <IconComponent className={`w-8 h-8 ${
-                      service.color === 'primary-teal' ? 'text-primary-teal' :
-                      service.color === 'secondary-mint' ? 'text-secondary-mint' :
-                      service.color === 'accent-pink' ? 'text-accent-pink' :
-                      'text-support-cream'
-                    }`} />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-teal transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-800 mb-6 leading-relaxed font-medium">
-                      {service.description}
-                    </p>
-                    
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-800">
-                          <CheckCircle className={`w-5 h-5 mr-3 flex-shrink-0 ${
-                            service.color === 'primary-teal' ? 'text-primary-teal' :
-                            service.color === 'secondary-mint' ? 'text-secondary-mint' :
-                            service.color === 'accent-pink' ? 'text-accent-pink' :
-                            'text-support-cream'
-                          }`} />
-                          <span className="text-sm font-medium">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <button className={`group/btn inline-flex items-center font-semibold transition-colors ${
-                      service.color === 'primary-teal' ? 'text-primary-teal hover:text-primary-teal/80' :
-                      service.color === 'secondary-mint' ? 'text-secondary-mint hover:text-secondary-mint/80' :
-                      service.color === 'accent-pink' ? 'text-accent-pink hover:text-accent-pink/80' :
-                      'text-support-cream hover:text-support-cream/80'
-                    }`}>
-                      Saiba mais
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+           <AnimatePresence mode='wait'>
+            <motion.img
+              key={currentIndex}
+              src={images[currentIndex]}
+              alt={`Slide ${currentIndex + 1}`}
+              className="w-full h-full object-cover bg-white"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+            />
+          </AnimatePresence>
+
+          {/* Navigation Buttons */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors z-10 opacity-0 group-hover:opacity-100 duration-300 focus:opacity-100"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors z-10 opacity-0 group-hover:opacity-100 duration-300 focus:opacity-100"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Controls & Indicators */}
+          <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center space-x-4 z-10 bg-gradient-to-t from-black/50 to-transparent p-4">
+            <button 
+              onClick={togglePlay}
+              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors backdrop-blur-sm"
+              aria-label={isPlaying ? "Pause" : "Play"}
+            >
+              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+            </button>
+            
+            <div className="flex space-x-2">
+              {images.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setIsPlaying(false);
+                    setCurrentIndex(idx);
+                  }}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    idx === currentIndex ? 'bg-brand-pink w-6' : 'bg-white/50 hover:bg-white/80 w-2'
+                  }`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         {/* CTA Section */}
@@ -187,3 +181,6 @@ const Services: React.FC = () => {
 };
 
 export default Services;
+
+
+
