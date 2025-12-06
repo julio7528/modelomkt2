@@ -79,10 +79,7 @@ const Services: React.FC = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Nossos <span className="text-brand-pink">Serviços Inteligentes</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Soluções completas de IA que transformam sua presença digital
-            e automatizam seus processos de marketing e vendas.
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Transformamos o potencial da Inteligência Artificial em crescimento real, entregando automação que funciona 24/7, presença digital que converte e insights que guiam decisões estratégicas para empresas que querem evoluir sem complexidade.</p>
         </motion.div>
 
         {/* Carousel Section */}
@@ -181,6 +178,5 @@ const Services: React.FC = () => {
 };
 
 export default Services;
-
 
 

@@ -37,18 +37,14 @@ const HeroSection: React.FC = () => {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
           variants={scrollAnimationVariants.fadeInUp}
         >
-          Transforme sua presença digital com{' '}
-          <span className="text-[#FFACAC]">IA de verdade</span>
+          Transformamos <span className="text-[#FFACAC]">IA</span> em crescimento real
         </motion.h1>
         
         <motion.p 
           className="text-lg sm:text-xl lg:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed"
           variants={scrollAnimationVariants.fadeInUp}
         >
-          Criamos soluções inteligentes que{' '}
-          <span className="text-[#FFACAC] font-semibold">automatizam</span>,{' '}
-          <span className="text-accent-pink font-semibold">convertem</span> e{' '}
-          <span className="text-white font-semibold">escalam</span> seu negócio
+          Automação 24/7, presença digital que converte e decisões estratégicas sem complexidade
         </motion.p>
         
         {/* CTAs */}

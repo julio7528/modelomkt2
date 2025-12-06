@@ -151,10 +151,7 @@ const ValueProposition: React.FC = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Conheça a <span className="text-brand-pink">MMT</span>
           </h2>
-          <p className="text-xl text-gray-800 max-w-3xl mx-auto font-medium">
-            Somos especialistas em transformação digital com inteligência artificial,
-            criando soluções que realmente fazem a diferença no seu negócio.
-          </p>
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto font-medium">Democratizamos IA de verdade para revolucionar negócios e tornar automação inteligente acessível a quem quer transformar presença digital em crescimento real.</p>
         </motion.div>
 
         {/* Cards Interativos */}
@@ -313,7 +310,7 @@ const ValueProposition: React.FC = () => {
                 className="text-gray-400 text-lg lg:text-xl mb-8 font-normal"
                 variants={scrollAnimationVariants.fadeInUp}
               >
-                Facilidade e rentabilidade para seu negócio crescer através da internet.
+                Entregamos automação inteligente que funciona 24/7 e sites que convertem, com resultados reais que você pode medir.
               </motion.p>
               
               <motion.ul 
