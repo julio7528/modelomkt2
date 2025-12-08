@@ -8,7 +8,7 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://technar.digital/public_img/LOGO3.png</image:loc>
+      <image:loc>public\LOGO3.png</image:loc>
       <image:title>MMT - Agência de Marketing Digital com IA</image:title>
       <image:caption>Logo da MMT: Especialistas em sites IA, chatbots e automação</image:caption>
     </image:image>

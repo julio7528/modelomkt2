@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
           className="w-full h-full object-cover"
           aria-label="Vídeo de fundo mostrando tecnologia e inovação"
         >
-          <source src="https://technar.digital/public_img/videohero.mp4" type="video/mp4" />
+          <source src="public\videohero.mp4" type="video/mp4" />
           Seu navegador não suporta vídeos HTML5.
         </video>
         {/* Overlay escuro mais forte para melhor contraste */}

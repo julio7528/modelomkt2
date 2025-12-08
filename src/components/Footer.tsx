@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="">
-                <img src="https://technar.digital/public_img/LOGO3.png" alt="MMT" className="w-10 h-8" />
+                <img src="public\LOGO3.png" alt="MMT" className="w-10 h-8" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-accent-pink">

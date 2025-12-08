@@ -25,7 +25,7 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
             <div className="w-10 h-10 rounded-lg overflow-hidden">
               <img 
-                src="https://technar.digital/public_img/LOGO3.png" 
+                src="public\LOGO3.png" 
                 alt="MMT Logo" 
                 className="w-full h-full object-contain"
               />
